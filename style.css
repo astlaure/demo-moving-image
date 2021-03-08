@@ -1,0 +1,154 @@
+#container {
+    display: flex;
+    justify-content: center;
+}
+
+.item {
+    position: relative;
+    height: 400px;
+    width: 400px;
+    min-width: 400px;
+    border: 1px solid black;
+    overflow: hidden;
+}
+
+.item img {
+    position: absolute;
+    left: -5%;
+    top: -5%;
+    width: 110%;
+    height: 110%;
+    transform: translate3d(0, 0, 0);
+    transition: all 250ms ease-out;
+}
+
+.item .back {
+    z-index: -3;
+}
+
+.item .front {
+    z-index: -2;
+    opacity: 0.5;
+}
+
+.item:hover .hover {
+    top: 70%;
+}
+
+.hover {
+    z-index: -1;
+    position: absolute;
+    width: 100%;
+    top: 100%;
+    transition: all 250ms ease-out;
+    padding: 0 2rem;
+}
+
+
+
+#item-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0;
+    z-index: -1000;
+    transition: opacity 300ms ease 0ms;
+    background-color: white;
+}
+
+#item-modal .container {
+    transform: scale(0.9);
+    transition: transform 300ms ease 0ms;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+#item-modal.visible {
+    opacity: 1;
+    z-index: 1;
+}
+
+#item-modal.visible .container {
+    transform: scale(1);
+}
+
+#item-modal .container .close {
+    display: flex;
+    justify-content: flex-end;
+    padding: 2rem;
+    cursor: pointer;
+}
+
+#item-modal .container .close div {
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+#item-modal .container .close div i {
+    background-color: pink;
+    height: 8px;
+    width: 50px;
+    display: block;
+}
+
+#item-modal .container .close div i:first-child {
+    transform: rotate(45deg);
+}
+
+#item-modal .container .close div i:last-child {
+    position: absolute;
+    transform: rotate(-45deg);
+}
+
+#item-modal #container-modal {
+    display: flex;
+    flex-grow: 1;
+    align-items: center;
+    padding: 0 2rem;
+}
+
+#item-modal #container-modal .arrow-left img, #item-modal #container-modal .arrow-right img {
+    width: 72px;
+    cursor: pointer;
+}
+
+#item-modal #container-modal .slide-container {
+    width: 100%;
+    position: relative;
+}
+
+#item-modal #container-modal .slide {
+    width: 100%;
+    display: flex;
+    opacity: 0;
+    position: absolute;
+    transition: opacity 300ms ease-out;
+    top: 0;
+    z-index: -1;
+}
+
+#item-modal #container-modal .slide.visible {
+    opacity: 1;
+    position: inherit;
+    transition-delay: 400ms;
+    z-index: 1;
+}
+
+#item-modal #container-modal .slide .item {
+    flex: 1;
+}
+
+#item-modal #container-modal .slide .text {
+    flex: 2;
+    padding: 0 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
