@@ -12,16 +12,17 @@
 <body>
     <div id="container">
         <div class="item" onclick="showModal(0)">
-            <img class="back" src="python.jpg" alt="">
-            <img class="front" src="css-3.svg" alt="">
+            <img class="back" src="/front.png" alt="" style="object-position: -50px 20px;">
+            <img class="front" src="/side.png" alt="" style="object-position: 145px 60px;">
+            <div class="background-01"></div>
             <div class="hover">
                 <h2>Python</h2>
                 <p>CSS</p>
             </div>
         </div>
         <div class="item" onclick="showModal(1)">
-            <img class="back" src="python.jpg" alt="">
-            <img class="front" src="css-3.svg" alt="">
+            <img class="back" src="/Nat1-2.jpg" alt="">
+            <img class="front" src="/Nat2-3.jpg" alt="" style="mix-blend-mode: lighten;opacity:1;">
             <div class="hover">
                 <h2>Python</h2>
                 <p>CSS</p>
@@ -44,8 +45,9 @@
                 <div class="slide-container">
                     <div class="slide">
                         <div class="item">
-                            <img class="back" src="python.jpg" alt="">
-                            <img class="front" src="css-3.svg" alt="">
+                            <img class="back" src="/front.png" alt="" style="object-position: -50px 20px;">
+                            <img class="front" src="/side.png" alt="" style="object-position: 145px 60px;">
+                            <div class="background-01"></div>
                         </div>
                         <div class="text">
                             <h2>Python</h2>
@@ -55,8 +57,8 @@
                     </div>
                     <div class="slide">
                         <div class="item">
-                            <img class="back" src="python.jpg" alt="">
-                            <img class="front" src="css-3.svg" alt="">
+                            <img class="back" src="/Nat1-2.jpg" alt="">
+                            <img class="front" src="/Nat2-3.jpg" alt="" style="mix-blend-mode: lighten;opacity:1;">
                         </div>
                         <div class="text">
                             <h2>Potato</h2>
