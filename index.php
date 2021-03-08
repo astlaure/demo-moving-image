@@ -11,7 +11,7 @@
 
 <body>
     <div id="container">
-        <div class="item" onclick="showModal()">
+        <div class="item" onclick="showModal(0)">
             <img class="back" src="python.jpg" alt="">
             <img class="front" src="css-3.svg" alt="">
             <div class="hover">
@@ -19,7 +19,7 @@
                 <p>CSS</p>
             </div>
         </div>
-        <div class="item" onclick="showModal()">
+        <div class="item" onclick="showModal(1)">
             <img class="back" src="python.jpg" alt="">
             <img class="front" src="css-3.svg" alt="">
             <div class="hover">
@@ -42,7 +42,7 @@
                     <img src="/arrow_back_ios-24px.svg" alt="">
                 </div>
                 <div class="slide-container">
-                    <div class="slide visible">
+                    <div class="slide">
                         <div class="item">
                             <img class="back" src="python.jpg" alt="">
                             <img class="front" src="css-3.svg" alt="">

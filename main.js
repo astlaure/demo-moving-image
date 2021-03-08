@@ -22,15 +22,19 @@ items.forEach((element) => {
     });
 });
 
-function showModal() {
+function showModal(index) {
     const modal = document.getElementById('item-modal');
+    const slides = document.querySelectorAll('#container-modal .slide-container .slide');
 
+    slides[index].classList.add('visible', 'first');
     modal.classList.add('visible');
 }
 
 function hideModal() {
     const modal = document.getElementById('item-modal');
+    const slide = document.querySelector('#container-modal .slide-container .slide.visible');
 
+    slide.classList.remove('visible');
     modal.classList.remove('visible');
 }
 
@@ -41,7 +45,7 @@ function nextSlide() {
         if (slides[i].classList.contains('visible')) {
             const index = i === slides.length - 1 ? 0 : i + 1;
 
-            slides[i].classList.remove('visible');
+            slides[i].classList.remove('visible', 'first');
             slides[index].classList.add('visible');
             break;
         }
@@ -55,7 +59,7 @@ function previousSlide() {
         if (slides[i].classList.contains('visible')) {
             const index = i === 0 ? slides.length - 1 : i - 1;
 
-            slides[i].classList.remove('visible');
+            slides[i].classList.remove('visible', 'first');
             slides[index].classList.add('visible');
             break;
         }

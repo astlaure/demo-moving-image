@@ -141,6 +141,10 @@
     z-index: 1;
 }
 
+#item-modal #container-modal .slide.visible.first {
+    transition-delay: 0ms;
+}
+
 #item-modal #container-modal .slide .item {
     flex: 1;
 }
